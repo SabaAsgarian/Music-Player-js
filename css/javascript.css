@@ -1,7 +1,7 @@
 main{
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    border: 1px solid #ffffff80;
+    border: 1px solid black;
     border-radius: 15px;
     box-shadow: 0 0.5px 0 1px rgba(255, 255, 255, 0.23) inset,
       0 1px 0 0 rgba(255, 255, 255, 0.6) inset, 0 4px 16px rgba(0, 0, 0, 0.12);
@@ -25,13 +25,15 @@ main{
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: #fff;
+  color: black;
   background: rgba(188, 184, 198, 0.2);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   box-shadow: inset 2px -2px 6px rgba(214, 214, 214, 0.2),
     inset -3px 3px 3px rgba(255, 255, 255, 0.3);
   border-radius: 16px;
+  height: 100%;
+
  
 }
 
@@ -53,12 +55,12 @@ main{
 
 .point {
   position: absolute;
-  top: 50%;
+  top: 55%;
   left: 50%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   width: 16px;
-  background-color: rgba(17, 6, 58, 0.7);
+  background-color: #749064;
   border: 2px solid rgba(222, 215, 255, 0.9);
   aspect-ratio: 1/1;
   border-radius: 50%;
@@ -85,7 +87,7 @@ main{
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: #fff;
+  color: black;
   background: rgba(188, 184, 198, 0.2);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -144,7 +146,7 @@ main{
   -webkit-appearance: none;
   width: 100%;
   height: 6px;
-  background: rgba(200, 187, 255, 0.6);
+  background: #749064;
   border-radius: 4px;
   margin-bottom: 16px;
   cursor: pointer;
@@ -178,7 +180,7 @@ main{
   border-radius: 50%;
   border: 0;
   outline: 0;
-  color: #fff;
+  color: black;
   font-size: 1.1rem;
   box-shadow: 0 4px 8px rgba(200, 187, 255, 0.3);
   cursor: pointer;
@@ -204,7 +206,7 @@ main{
   -webkit-appearance: none;
   width: 100%;
   height: 6px;
-  background: rgba(200, 187, 255, 0.6);
+  background: #749064;
   border-radius: 4px;
   margin-bottom: 16px;
   cursor: pointer;
@@ -213,7 +215,7 @@ main{
 #progress::-webkit-slider-thumb {
   appearance: none;
   -webkit-appearance: none;
-  background: rgb(77, 58, 162);
+  background: #5c724f;
   width: 20px;
   aspect-ratio: 1/1;
   border-radius: 50%;
@@ -234,11 +236,11 @@ main{
   width: 36px;
   aspect-ratio: 1/1;
   margin: 20px;
-  background: rgba(200, 187, 255, 0.6);
+  background: #749064;
   border-radius: 50%;
   border: 0;
   outline: 0;
-  color: #fff;
+  color: black;
   font-size: 1.1rem;
   box-shadow: 0 4px 8px rgba(200, 187, 255, 0.3);
   cursor: pointer;
@@ -260,7 +262,7 @@ main{
   width: 10%;
   -webkit-appearance: none;
   appearance: none;
-  background: rgba(200, 187, 255, 0.6);
+  background: #749064;
   border-radius: 5px;
   height: 10px;
   outline: none;
@@ -271,7 +273,7 @@ main{
   appearance: none;
   height: 20px;
   width: 20px;
-  background: rgb(77, 58, 162);
+  background: #4f6344;
   border: 5px solid white;
   border-radius: 50%;
   cursor: pointer;
@@ -462,7 +464,7 @@ main{
 } 
 /* login */
 .marked {
-  background-color: #3b43b2e7;
+  background-color: #749064ae;
   border-radius: 10%;
   box-shadow: 0 0 10px rgba(255, 105, 180, 0.5);
   
