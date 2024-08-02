@@ -669,16 +669,12 @@ video {
   height: 100px;
 }
 
-.h-\[120vh\] {
-  height: 120vh;
-}
-
-.h-\[130vh\] {
-  height: 130vh;
-}
-
 .h-\[20\%\] {
   height: 20%;
+}
+
+.h-\[200vh\] {
+  height: 200vh;
 }
 
 .h-\[20px\] {
@@ -1099,6 +1095,10 @@ video {
 }
 
 @media (min-width: 1280px) {
+  .xl\:h-\[170vh\] {
+    height: 170vh;
+  }
+
   .xl\:w-\[95\%\] {
     width: 95%;
   }

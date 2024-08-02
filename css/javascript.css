@@ -33,12 +33,14 @@ main{
     inset -3px 3px 3px rgba(255, 255, 255, 0.3);
   border-radius: 16px;
   height: 100%;
- z-index: 9999;
+  z-index: 9999;
+
  
 }
 
 .album-cover {
   position: relative;
+  z-index: 9999;
 }
 
 .album-cover img {
@@ -51,6 +53,7 @@ main{
   transition: transform 0.5s ease-out;
   pointer-events: none;
   user-select: none;
+  z-index: 9999;
 }
 
 .point {
@@ -64,7 +67,7 @@ main{
   border: 2px solid rgba(222, 215, 255, 0.9);
   aspect-ratio: 1/1;
   border-radius: 50%;
-  z-index: 2;
+  z-index: 9999;
 }
 
 .music-player h2 {
