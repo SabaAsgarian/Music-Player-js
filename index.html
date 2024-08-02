@@ -17,7 +17,7 @@
     </style>
 </head>
 
-<body class="bg-bg bg-[#f5f6e7] h-[120vh] flex justify-center bg-cover bg-repeat font-ns capitalize">
+<body class="bg-bg bg-[#f5f6e7] bg-center h-[120vh] flex justify-center bg-cover bg-repeat font-ns capitalize">
     <main class="w-[98%] xl:w-[95%] h-[130vh] m-[1.5%] bg-[#080c2631]">
         <div class="row h-[60%]">
             <div class="w-[30%] h-full  border-r-2 border-black ">
@@ -51,16 +51,16 @@
                         class="flex flex-wrap w-full h-[60%] justify-start items-center   *:text-[20px]  *:text-start *:rounded-lg px-[5%]">
                         <li class="w-full home cursor-pointer"><i class="icon-home-3"></i> Home</li>
                         <li class="w-full cursor-pointer" id="btn"><i class="icon-login"></i>login</li>
-                        <div class="popup hide justify-center items-center flex w-full h-full *:text-center bg-bg bg-[#f5f6e7]  border-r-2 border-black">
+                        <div class="popup hide justify-center items-center flex w-full h-full *:text-center bg-bg bg-[#f5f6e7]  bg-center border-r-2 border-black">
                             <div class="row justify-center items-center ">
                                 <div
                                     class="w-full md:w-[50%] h-full  *:rounded-lg rounded-xl bg-[#7490645c] shadow-2xl shadow-[#749064ae]">
                                     <p class="my-[5%]">UserName:</p>
                                     <input class=" text-center w-[60%] h-full !text-black" type="text"
-                                        placeholder="username" id="user">
+                                        placeholder="username" id="user" maxlength="20">
                                     <p class="my-[5%]">PassWord:</p>
                                     <input class="text-center w-[60%] h-full !text-black" type="password"
-                                        placeholder="password" id="password"> <br>
+                                        placeholder="password" id="password" maxlength="20"> <br>
                                     <input
                                         class="hover:bg-[#435b36ae] w-full md:w-[20%] h-full   bg-[#749064] cursor-pointer my-[5%] text-black"
                                         type="submit" id="submit">
@@ -415,12 +415,29 @@
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
         },
+        breakpoints: {
+            500: { // sm
+                slidesPerView: 1.5,
+            },
+            768: { // md
+                slidesPerView: 3,
+            },
+            1280: { // lg to 2xl
+                slidesPerView: 3.5,
+            },
+        },
+        on: {
+            resize: function () {
+                swiper.changeDirection(getDirection());
+            },
+        },
         on: {
             resize: function () {
                 swiper.changeDirection(getDirection());
             },
         },
     });
+    
 
     function getDirection() {
         var windowWidth = window.innerWidth;
@@ -479,17 +496,23 @@
 
     // Add an event listener to the search input field
     searchInput.addEventListener('input', (event) => {
-        const searchTerm = event.target.value.toLowerCase();
-        swiperSlides.forEach((slide) => {
-            const imgSrc = slide.querySelector('img').src;
-            const imgName = imgSrc.split('/').pop();
-            if (imgName.toLowerCase().includes(searchTerm)) {
-                slide.classList.add('marked');
-            } else {
-                slide.classList.remove('marked');
-            }
-        });
+  const searchTerm = event.target.value.toLowerCase();
+  if (searchTerm === '') {
+    swiperSlides.forEach((slide) => {
+      slide.classList.remove('marked');
     });
+  } else {
+    swiperSlides.forEach((slide) => {
+      const imgSrc = slide.querySelector('img').src;
+      const imgName = imgSrc.split('/').pop();
+      if (imgName.toLowerCase().includes(searchTerm)) {
+        slide.classList.add('marked');
+      } else {
+        slide.classList.remove('marked');
+      }
+    });
+  }
+});
 </script>
 
 </html>
