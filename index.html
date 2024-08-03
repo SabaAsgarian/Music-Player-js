@@ -18,7 +18,7 @@
 </head>
 
 <body
-    class="bg-bg bg-[#f5f6e7] bg-center h-[200vh] xl:h-[167vh] flex justify-center bg-cover bg-repeat font-ns capitalize">
+    class="bg-bg bg-[#f5f6e7] bg-center h-[205vh] xl:h-[160vh] flex justify-center bg-cover bg-repeat font-ns capitalize">
     <main class="w-[98%] xl:w-[95%] h-full m-[1.5%] bg-[#080c2631]">
         <div class="row h-[60%]">
             <div class="w-[30%] h-full  border-r-2 border-black ">
@@ -59,10 +59,10 @@
                                     class="w-full md:w-[50%] h-full  *:rounded-lg rounded-xl bg-[#7490645c] shadow-2xl shadow-[#749064ae]">
                                     <p class="my-[5%]">UserName:</p>
                                     <input class=" text-center w-[60%] h-full !text-black" type="text"
-                                        placeholder="username" id="user" maxlength="20">
+                                        placeholder="username" id="user" maxlength="16">
                                     <p class="my-[5%]">PassWord:</p>
                                     <input class="text-center w-[60%] h-full !text-black" type="password"
-                                        placeholder="password" id="password" maxlength="20"> <br>
+                                        placeholder="password" id="password" maxlength="16"> <br>
                                     <input
                                         class="hover:bg-[#435b36ae] w-full md:w-[20%] h-full   bg-[#749064] cursor-pointer my-[5%] text-black"
                                         type="submit" id="submit">
@@ -339,8 +339,8 @@
     }
 
     function updateSongInfo() {
-        songName.textContent = songs[currentSongIndex].title;
-        artistName.textContent = songs[currentSongIndex].name;
+        songName.innerHTML = songs[currentSongIndex].title;
+        artistName.innerHTML = songs[currentSongIndex].name;
         song.src = songs[currentSongIndex].source;
         rotatingImage.src = songs[currentSongIndex].cover;
 
@@ -396,7 +396,7 @@
     function updateDuration(time) {
     const minutes = Math.floor(time / 60);
     const seconds = Math.floor(time % 60);
-    durationElement.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+    durationElement.innerHTML = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
 }
     forwardButton.addEventListener("click", function () {
         currentSongIndex = (currentSongIndex + 1) % songs.length;
@@ -430,7 +430,7 @@
                 slidesPerView: 1.5,
             },
             500: { // sm
-                slidesPerView: 3,
+                slidesPerView: 2.5,
             },
             768: { // md
                 slidesPerView: 3.2,
@@ -460,7 +460,7 @@
     }
     // swiper
     // Get the swiper slides with classes a, b, and c
-    const swiperSlides = document.querySelectorAll('.swiper-slide.a, .swiper-slide.b, .swiper-slide.c , .swiper-slide.d , .swiper-slide.e, .swiper-slide.f, .swiper-slide.g, .swiper-slide.h, .swiper-slide.i , .swiper-slide.j , .swiper-slide.k , .swiper-slide.l , .swiper-slide.m');
+    const swiperSlides = document.querySelectorAll('.swiper-slide');
 
     // Add an event listener to each slide
     swiperSlides.forEach((slide) => {
@@ -494,11 +494,11 @@
     })
 
     submit.addEventListener('click', () => {
-        h1.textContent = user.value
+        h1.innerHTML = user.value
         popup.classList.add('hide')
     })
     out.addEventListener('click', () => {
-        h1.textContent = 'saba asgarian' // default value
+        h1.innerHTML = 'saba asgarian' // default value
     })
     //  login
     // Get the search input field
