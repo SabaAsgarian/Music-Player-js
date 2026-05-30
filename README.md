@@ -2,11 +2,6 @@
 # Music-Player-js
 Music-Player-js
 
-
-
-
-
-
 ![pllluy](https://github.com/user-attachments/assets/bea90a58-bf18-43d6-a95c-b0fea1aad017)
 
 
